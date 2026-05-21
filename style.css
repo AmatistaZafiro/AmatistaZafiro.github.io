@@ -140,15 +140,15 @@ h3 {
         justify-content: space-between;
         gap: 8px;
         padding: 10px;
+        margin-top: 35px;
+    margin-bottom: auto;
     }
 
     /* Foto reducida al lado izquierdo */
     .bloque-foto {
-        width: 45%; 
-        display: flex;
-        justify-content: center;
-  flex-direction: column;
-  align-items: center;
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
     }
 
     .tarjeta img {
@@ -160,6 +160,9 @@ h3 {
     /* Botón al lado derecho bien ajustado */
     #vermas {
         width: 45%; 
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
         order: 2;
         padding: 8px 5px; /* Más compacto */
         font-size: 0.85rem; /* Letra un poco más chica para que no se desborde */
@@ -175,3 +178,4 @@ h3 {
         text-align: center;
     }
 }
+
