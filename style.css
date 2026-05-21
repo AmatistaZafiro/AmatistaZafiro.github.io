@@ -1,37 +1,118 @@
-/* 1. Importamos una fuente redonda y gruesa directamente de Google */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
 
-/* 2. Configuración del fondo de la página */
 body {
-    /* Fondo rosado chicle */
+    background-image: url(fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Fredoka', sans-serif; /* Aquí aplicas la fuente */
+    font-family: 'Fredoka', sans-serif;
 }
 
 header {
+    display: flex;
+    position: fixed;
+    top: 2px;
+    justify-content: center;
     background-color: #ff4fa8;
     border-radius: 25px;
     width: 100%;
 }
 
-/* 3. El truco del texto estilo Barbie en solo 3 pasos */
+
 h1 {
-    font-size: 5.5rem;
+    /* font-size: 5.5rem; */
     color: #ff7ebb;       /* Rosado claro para el centro de la letra */
     text-align: center;
     line-height: 1.1;
     letter-spacing: 2px;
-
-    /* PASO A: El borde blanco grueso exterior */
-    -webkit-text-stroke: 7px #ffffff;
-    
-    /* PASO B: Evita que el borde blanco invada el color rosa de la letra */
+    -webkit-text-stroke: 0.08em #ffffff;
     paint-order: stroke fill; 
-
-    /* PASO C: La sombra rosa oscura desplazada hacia abajo que da el efecto 3D */
-    text-shadow: 6px 8px 0px #b51c6c; 
+    text-shadow: 0.08em 0.1em 0px #b51c6c; 
 }
+
+h3 {
+    color: white;
+    padding-top: 2rem;
+}
+
+.tarjeta img {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.tarjeta {
+    display: flex;
+    border-radius: 15px;
+    border: 5px solid #ff4fa8;
+    width: 50%;
+    background-color: rgba(255, 79, 168, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 5px;
+}
+
+#vermas {
+    /* margin-top: 20px; */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff4fa8;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 50%;
+}
+
+.bloque-foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+/* Pantalla completa de la galeri­a */
+.modal {
+    display: none; position: fixed; z-index: 999;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.95); justify-content: center; align-items: center;
+}
+.modal.activo { display: flex; }
+
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.grid-galeria img {
+    width: 100%; height: 150px; object-fit: cover;
+    border-radius: 6px; cursor: pointer; transition: transform 0.2s;
+}
+.grid-galeria img:hover { transform: scale(1.05); }
+
+/* Segundo fondo para ver la foto gigante */
+.lightbox {
+    display: none; position: fixed; z-index: 1000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center;
+}
+.lightbox.activo { display: flex; }
+#imagen-maximizada { max-width: 90vw; max-height: 85vh; border-radius: 4px; }
+
+/* Botones de cerrar */
+.cerrar-galeria, .cerrar-lightbox { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; }
