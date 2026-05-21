@@ -120,38 +120,60 @@ h3 {
 
 @media (max-width: 768px) {
     body {
-        height: auto;
-        min-height: 100vh;
-        padding: 90px 10px 20px 10px;
+        /* Bloqueamos el scroll y fijamos el alto total de la pantalla */
+        height: 100vh;
+        overflow: hidden; 
+        padding: 60px 10px 10px 10px; /* Reducimos el espacio superior */
     }
+
+    header {
+        width: 85%;
+        top: 5px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Achicamos el título principal si es muy grande */
+    }
+
+    /* Rediseño de la Tarjeta para que sea más pequeña */
     .tarjeta {
-        width: 95%;
+        width: 90%; 
+        max-height: 65vh; /* Limitamos la altura de la tarjeta al 65% de la pantalla */
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
+        flex-wrap: wrap; 
         align-items: center;
         justify-content: space-between;
-        gap: 10px;
-        padding: 12px;
+        gap: 8px;
+        padding: 10px;
     }
+
+    /* Foto reducida al lado izquierdo */
     .bloque-foto {
-        width: 45%;
+        width: 45%; 
         order: 1;
     }
+
     .tarjeta img {
         width: 100%;
-        height: auto;
+        max-height: 180px; /* Evita que la foto estire la tarjeta hacia abajo */
+        object-fit: cover; /* Recorta la imagen limpiamente si es necesario */
     }
+
+    /* Botón al lado derecho bien ajustado */
     #vermas {
-        width: 45%;
+        width: 45%; 
         order: 2;
-        padding: 12px 5px;
-        font-size: 0.9rem;
+        padding: 8px 5px; /* Más compacto */
+        font-size: 0.85rem; /* Letra un poco más chica para que no se desborde */
     }
+
+    /* Texto abajo pero muy compacto */
     h3 {
-        width: 100%;
+        width: 100%; 
         order: 3;
-        padding-top: 15px;
+        padding-top: 5px; /* Espaciado mínimo */
+        margin: 0; /* Quitamos márgenes por defecto */
+        font-size: 1rem; /* Texto más pequeño para ahorrar espacio */
         text-align: center;
     }
 }
