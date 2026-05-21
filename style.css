@@ -146,6 +146,7 @@ h3 {
     .bloque-foto {
         width: 45%; 
         display: flex;
+        justify-content: center;
   flex-direction: column;
   align-items: center;
     }
