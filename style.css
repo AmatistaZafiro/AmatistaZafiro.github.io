@@ -127,7 +127,6 @@ h3 {
     }
 
     header {
-        width: 85%;
         top: 5px;
     }
 
@@ -137,9 +136,6 @@ h3 {
 
     /* Rediseño de la Tarjeta para que sea más pequeña */
     .tarjeta {
-        display: flex;
-        position: fixed;
-        top: 5px:
         width: 90%; 
         max-height: 65vh; /* Limitamos la altura de la tarjeta al 65% de la pantalla */
         display: flex;
