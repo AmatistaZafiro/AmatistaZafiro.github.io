@@ -116,3 +116,42 @@ h3 {
 
 /* Botones de cerrar */
 .cerrar-galeria, .cerrar-lightbox { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; }
+
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 90px 10px 20px 10px;
+    }
+    .tarjeta {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px;
+    }
+    .bloque-foto {
+        width: 45%;
+        order: 1;
+    }
+    .tarjeta img {
+        width: 100%;
+        height: auto;
+    }
+    #vermas {
+        width: 45%;
+        order: 2;
+        padding: 12px 5px;
+        font-size: 0.9rem;
+    }
+    h3 {
+        width: 100%;
+        order: 3;
+        padding-top: 15px;
+        text-align: center;
+    }
+}
