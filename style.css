@@ -1,0 +1,37 @@
+/* 1. Importamos una fuente redonda y gruesa directamente de Google */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
+
+/* 2. Configuración del fondo de la página */
+body {
+    /* Fondo rosado chicle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Fredoka', sans-serif; /* Aquí aplicas la fuente */
+}
+
+header {
+    background-color: #ff4fa8;
+    border-radius: 25px;
+    width: 100%;
+}
+
+/* 3. El truco del texto estilo Barbie en solo 3 pasos */
+h1 {
+    font-size: 5.5rem;
+    color: #ff7ebb;       /* Rosado claro para el centro de la letra */
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: 2px;
+
+    /* PASO A: El borde blanco grueso exterior */
+    -webkit-text-stroke: 7px #ffffff;
+    
+    /* PASO B: Evita que el borde blanco invada el color rosa de la letra */
+    paint-order: stroke fill; 
+
+    /* PASO C: La sombra rosa oscura desplazada hacia abajo que da el efecto 3D */
+    text-shadow: 6px 8px 0px #b51c6c; 
+}
