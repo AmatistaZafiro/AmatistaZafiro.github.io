@@ -137,6 +137,9 @@ h3 {
 
     /* Rediseño de la Tarjeta para que sea más pequeña */
     .tarjeta {
+        display: flex;
+        position: fixed;
+        top: 5px:
         width: 90%; 
         max-height: 65vh; /* Limitamos la altura de la tarjeta al 65% de la pantalla */
         display: flex;
@@ -151,6 +154,9 @@ h3 {
     .bloque-foto {
         width: 45%; 
         order: 1;
+        display: flex;
+  flex-direction: column;
+  align-items: center;
     }
 
     .tarjeta img {
