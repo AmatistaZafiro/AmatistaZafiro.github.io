@@ -126,10 +126,6 @@ h3 {
         padding: 60px 10px 10px 10px; /* Reducimos el espacio superior */
     }
 
-    header {
-        top: 5px;
-    }
-
     h1 {
         font-size: 2rem; /* Achicamos el título principal si es muy grande */
     }
@@ -149,7 +145,6 @@ h3 {
     /* Foto reducida al lado izquierdo */
     .bloque-foto {
         width: 45%; 
-        order: 1;
         display: flex;
   flex-direction: column;
   align-items: center;
